@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import numpy as np
 """ le da un alias a l modulo y lo llama con esta """
 

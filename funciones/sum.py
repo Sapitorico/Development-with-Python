@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def sumar_lista(numeros):
     suma = 0
     for num in numeros:

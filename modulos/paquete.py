@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from sklearn.linear_model import LinearRegression
 """ importa el modulo con un paquete """
 

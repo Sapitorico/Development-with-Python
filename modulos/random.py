@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from random import randint
 """ importa una funcion especifia del modulo """
 
