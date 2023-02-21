@@ -40,10 +40,15 @@ edad = 21 - reconnoce que el dato es un entero
 
 * multiparadigma: podemos trasladar un progrmama echo en pytohn a cualquier otro sistema operatvo
 
+<img src="https://user-images.githubusercontent.com/105575956/220435134-58d905f1-0c2c-4d31-86c5-86d38cd72198.jpg" width="500"/>
+
 </details>
 
 <details>
 <summary><h2>Interprete</h2></summary>
+
+<img width="428" align="left" alt="Screenshot 2023-02-21 155701" src="https://user-images.githubusercontent.com/105575956/220434700-7e812603-527c-4b66-88ab-07114749c062.png">
+
 
 Las funciones de edición de línea del intérprete incluyen edición interactiva, sustitución del historial y completado de código en sistemas que soporten la biblioteca GNU Readline.
 
