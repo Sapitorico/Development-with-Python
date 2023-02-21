@@ -867,8 +867,7 @@ output: sapitorico
 
 # Recrusos
 
-<iframe src="https://ejemplo.com" width="100%" height="400px"></iframe>
-
+<a href="https://overapi.com/python">Python Cheat Sheets</a>
 
 
 <p>Este repsoitorio esta dedicadoa mi estudio y desarrollo con el lengruaje python</p>
