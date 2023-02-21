@@ -91,6 +91,9 @@ También se puede utilizar cuando se utiliza from con efectos similares
 __init__. The __init__. Py files are required to make Python treat directories containing the file as packages. This prevents directories with a common name, on the module search path.
 
 
+
+En Python, un módulo es un archivo que contiene código Python que puede ser utilizado en otros programas. La importación de módulos te permite acceder a funciones, clases y variables definidas en otros archivos, lo que te permite reutilizar el código y ahorrar tiempo y esfuerzo en el desarrollo de programas.
+
 </details>
 
 <p>Este repsoitorio esta dedicadoa mi estudio y desarrollo con el lengruaje python</p>
