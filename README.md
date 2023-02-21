@@ -142,6 +142,8 @@ mi_diccionario["seis"] = 6
 del mi_diccionario["cuatro"]
 print(mi_diccionario)
 ```
+    
+<img src="https://user-images.githubusercontent.com/105575956/220453704-bd9d73e0-90d8-4b4c-9b66-c08333f7fb8d.png" width="400"/>
 
 
 </details>
