@@ -476,6 +476,372 @@ El TDD puede llevar más tiempo al principio, pero a largo plazo puede ahorrar t
 
 </details>
 
+<details>
+<summary><h2>Inheritance</h2></summary>
+
+La herencia es un mecanismo en Python que permite crear nuevas clases basadas en clases ya existentes. La clase existente se llama clase base o clase padre y la nueva clase se llama clase derivada o clase hija. La clase derivada hereda todos los atributos y métodos de la clase padre y puede agregar nuevos atributos y métodos o modificar los ya existentes.
+
+Un ejemplo de herencia en Python es el siguiente:
+
+```py
+class Animal:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def talk(self):
+        pass
+
+class Dog(Animal):
+    def __init__(self, name, age, breed):
+        super().__init__(name, age)
+        self.breed = breed
+
+    def talk(self):
+        return "Woof"
+
+class Cat(Animal):
+    def __init__(self, name, age, color):
+        super().__init__(name, age)
+        self.color = color
+
+    def talk(self):
+        return "Meow"
+```
+
+En este ejemplo, se define una clase Animal que tiene dos atributos (name y age) y un método talk que no hace nada. Luego, se definen dos clases derivadas (Dog y Cat) que heredan de la clase Animal.
+
+La clase Dog tiene un atributo adicional (breed) y un método talk que devuelve "Woof". La clase Cat tiene un atributo adicional (color) y un método talk que devuelve "Meow". Ambas clases utilizan el método super() para llamar al constructor de la clase padre y heredar los atributos name y age.
+
+Al utilizar la herencia, se evita tener que repetir el código de la clase base en las clases derivadas. En lugar de eso, se define una vez en la clase base y se reutiliza en las clases derivadas. Además, las clases derivadas pueden agregar comportamiento adicional o modificar el comportamiento existente de la clase base.
+
+En resumen, la herencia es una característica importante de la programación orientada a objetos que permite la reutilización de código y la creación de nuevas clases basadas en clases existentes.
+
+La herencia es una característica importante de la programación orientada a objetos que permite la creación de nuevas clases basadas en clases existentes. La nueva clase, llamada clase derivada o clase hija, hereda todos los atributos y métodos de la clase existente, llamada clase base o clase padre. La herencia facilita la reutilización del código y la organización de las clases en jerarquías.
+
+En Python, la herencia se define utilizando la sintaxis class DerivedClass(BaseClass):. La clase derivada puede agregar nuevos atributos y métodos o modificar los ya existentes. Si la clase derivada define un método con el mismo nombre que uno en la clase base, el método de la clase derivada reemplaza al de la clase base. Sin embargo, la clase derivada puede llamar al método de la clase base utilizando la función super().
+
+Veamos un ejemplo más detallado:
+
+```py
+class Shape:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def area(self):
+        pass
+
+class Rectangle(Shape):
+    def __init__(self, x, y, width, height):
+        super().__init__(x, y)
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+class Circle(Shape):
+    def __init__(self, x, y, radius):
+        super().__init__(x, y)
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius ** 2
+```
+
+En este ejemplo, se define una clase base llamada Shape que tiene dos atributos x e y y un método area que no hace nada. Luego, se definen dos clases derivadas: Rectangle y Circle. La clase Rectangle tiene dos atributos adicionales (width y height) y un método area que calcula el área del rectángulo. La clase Circle tiene un atributo adicional (radius) y un método area que calcula el área del círculo.
+
+La clase Rectangle y la clase Circle heredan los atributos y métodos de la clase Shape. Por lo tanto, pueden acceder a los atributos x e y y llamar al método area sin tener que definirlos nuevamente. Además, las clases derivadas agregan atributos y métodos adicionales que son específicos de cada forma.
+
+En resumen, la herencia es una técnica importante de la programación orientada a objetos que permite la reutilización de código y la organización de las clases en jerarquías. En Python, se define utilizando la sintaxis class DerivedClass(BaseClass):. Las clases derivadas heredan todos los atributos y métodos de la clase base y pueden agregar nuevos atributos y métodos o modificar los ya existentes.
+
+</details>
+
+<details>
+<summary><h2>Input/Output</h2></summary>
+
+En Python, la entrada y salida (Input/Output, I/O) se manejan utilizando funciones integradas que permiten la lectura y escritura de datos desde y hacia archivos, la consola y otros dispositivos.
+
+La función print() se utiliza para imprimir datos en la consola. Por defecto, la función print() separa los elementos con un espacio y agrega un salto de línea al final. Sin embargo, es posible cambiar estos comportamientos utilizando los argumentos opcionales sep y end. Por ejemplo:
+
+```py
+nombre = "Juan"
+edad = 25
+print("Hola,", nombre, "tienes", edad, "años.")
+# Salida: Hola, Juan tienes 25 años.
+
+print("Hola,", nombre, "tienes", edad, "años.", sep="-", end="!\n")
+# Salida: Hola-Juan-tienes-25-años.!
+```
+
+Para leer datos desde la consola, se utiliza la función input(). Esta función espera que el usuario ingrese una cadena de caracteres y devuelve la cadena como resultado. Por ejemplo:
+
+```py
+nombre = input("Ingresa tu nombre: ")
+print("Hola,", nombre)
+```
+
+Para leer y escribir datos desde y hacia archivos, se utilizan las funciones open(), read() y write(). La función open() se utiliza para abrir un archivo y devuelve un objeto archivo. La función read() se utiliza para leer los datos del archivo y la función write() se utiliza para escribir datos en el archivo. Es importante cerrar el archivo después de usarlo utilizando la función close().
+
+Por ejemplo, para leer los contenidos de un archivo llamado "archivo.txt" y imprimirlos en la consola, se podría hacer lo siguiente:
+
+```py
+with open("archivo.txt", "r") as archivo:
+    contenido = archivo.read()
+    print(contenido)
+```
+
+En resumen, en Python, la entrada y salida (Input/Output, I/O) se manejan utilizando funciones integradas que permiten la lectura y escritura de datos desde y hacia archivos, la consola y otros dispositivos. La función print() se utiliza para imprimir datos en la consola, la función input() se utiliza para leer datos desde la consola y las funciones open(), read() y write() se utilizan para leer y escribir datos desde y hacia archivos.
+</details>
+
+<details>
+<summary>><h2>Python - Almost a circle</h2></summary>
+
+
+# *args and **kwargs in python explained
+
+En Python, "args" y "kwargs" son dos parámetros especiales que se pueden utilizar en las definiciones de las funciones para recibir argumentos variables.
+
+"Args" es un parámetro que permite a una función recibir un número variable de argumentos no nombrados. Esto significa que se puede pasar cualquier cantidad de argumentos a la función y Python los empacará todos en una tupla. Veamos un ejemplo:
+
+```py
+def my_function(*args):
+    for arg in args:
+        print(arg)
+
+my_function(1, 2, 3)
+```
+
+En este ejemplo, definimos una función llamada my_function con un parámetro *args. Luego llamamos a la función con tres argumentos: 1, 2 y 3. Al imprimir los valores de args en el cuerpo de la función, obtenemos:
+
+```py
+1
+2
+3
+```
+
+Esto significa que Python empacó los argumentos en una tupla y los pasó a la función.
+
+"Kwargs" es un parámetro que permite a una función recibir un número variable de argumentos nombrados. Esto significa que se puede pasar cualquier cantidad de argumentos con un nombre específico a la función y Python los empacará en un diccionario. Veamos un ejemplo:
+
+```py
+def my_function(**kwargs):
+    for key, value in kwargs.items():
+        print(key, value)
+
+my_function(name='Alice', age=30, city='New York')
+```
+
+En este ejemplo, definimos una función llamada my_function con un parámetro **kwargs. Luego llamamos a la función con tres argumentos nombrados: name, age y city. Al imprimir los valores de kwargs en el cuerpo de la función, obtenemos:
+
+```py
+name Alice
+age 30
+city New York
+```
+
+Esto significa que Python empacó los argumentos nombrados en un diccionario y los pasó a la función.
+
+"Args" y "kwargs" también se pueden combinar en una misma función. En este caso, "args" se utiliza para recibir argumentos no nombrados y "kwargs" se utiliza para recibir argumentos nombrados. Veamos un ejemplo:
+
+```py
+def my_function(*args, **kwargs):
+    for arg in args:
+        print(arg)
+    for key, value in kwargs.items():
+        print(key, value)
+
+my_function(1, 2, 3, name='Alice', age=30, city='New York')
+```
+
+En este ejemplo, definimos una función llamada my_function con los parámetros *args y **kwargs. Luego llamamos a la función con tres argumentos no nombrados y tres argumentos nombrados. Al imprimir los valores de args y kwargs en el cuerpo de la función, obtenemos:
+
+```py
+1
+2
+3
+name Alice
+age 30
+city New York
+```
+
+Esto significa que Python empacó los argumentos no nombrados en una tupla y los argumentos nombrados en un diccionario, y los pasó a la función.
+
+En resumen, "args" y "kwargs" son parámetros especiales que permiten a las funciones de Python recibir argumentos variables. "Args" se utiliza para recibir argumentos no nombrados, mientras que "kwargs" se utiliza para recibir argumentos nombrados. Estos parámetros pueden ayudar a hacer que las funciones sean más flexibles y fáciles de usar.
+
+
+# JSON encoder and decoder
+
+La librería "json" de Python permite codificar y decodificar datos en formato JSON. JSON es un formato de datos ligero y fácil de leer que se utiliza comúnmente en aplicaciones web y móviles para enviar y recibir datos.
+
+Para usar la librería "json" en Python, primero debemos importarla:
+
+```py
+import json
+```
+
+Una vez que hemos importado la librería, podemos usar sus funciones para codificar y decodificar datos en formato JSON. Por ejemplo, para codificar un diccionario Python en formato JSON, podemos usar la función json.dumps():
+
+```py
+my_dict = {'name': 'Alice', 'age': 30, 'city': 'New York'}
+json_str = json.dumps(my_dict)
+print(json_str)
+```
+
+En este ejemplo, creamos un diccionario llamado my_dict y luego lo codificamos en formato JSON utilizando la función json.dumps(). Luego imprimimos la cadena JSON resultante en la consola.
+
+Para decodificar una cadena JSON en un objeto Python, podemos usar la función json.loads():
+
+```py
+json_str = '{"name": "Alice", "age": 30, "city": "New York"}'
+my_dict = json.loads(json_str)
+print(my_dict)
+```
+
+En este ejemplo, creamos una cadena JSON llamada json_str y luego la decodificamos en un diccionario Python utilizando la función json.loads(). Luego imprimimos el diccionario resultante en la consola.
+
+La librería "json" también proporciona opciones avanzadas para personalizar el proceso de codificación y decodificación. Por ejemplo, podemos proporcionar una función personalizada para codificar un objeto en formato JSON utilizando el parámetro default de la función json.dumps():
+
+```py
+class Person:
+    def __init__(self, name, age, city):
+        self.name = name
+        self.age = age
+        self.city = city
+
+def encode_person(obj):
+    if isinstance(obj, Person):
+        return {'name': obj.name, 'age': obj.age, 'city': obj.city}
+    else:
+        raise TypeError('Object of type Person is not JSON serializable')
+
+my_person = Person('Alice', 30, 'New York')
+json_str = json.dumps(my_person, default=encode_person)
+print(json_str)
+```
+
+En este ejemplo, definimos una clase Person que representa una persona con un nombre, una edad y una ciudad. Luego definimos una función encode_person() que se utiliza para codificar objetos de la clase Person en formato JSON. Finalmente, creamos un objeto my_person de la clase Person y lo codificamos en formato JSON utilizando la función json.dumps() y el parámetro default.
+
+En resumen, la librería "json" de Python permite codificar y decodificar datos en formato JSON. Esto es útil para enviar y recibir datos en aplicaciones web y móviles. La librería proporciona funciones simples para codificar y decodificar datos, así como opciones avanzadas para personalizar el proceso de codificación y decodificación.
+
+# Unitests
+
+La biblioteca unittest de Python es un marco de prueba integrado que se utiliza para escribir y ejecutar pruebas unitarias en Python. unittest proporciona una serie de clases y métodos para crear y ejecutar pruebas unitarias.
+
+Para utilizar la biblioteca unittest, primero debemos importarla:
+
+```py
+import unittest
+```
+
+Luego, podemos crear una clase de prueba que herede de unittest.TestCase. Dentro de esta clase, podemos definir diferentes métodos que contienen las pruebas unitarias que queremos ejecutar. Por ejemplo, el siguiente código define una clase de prueba simple con una prueba unitaria:
+
+```py
+class MyTestCase(unittest.TestCase):
+    def test_addition(self):
+        self.assertEqual(1 + 2, 3)
+```
+
+En este ejemplo, creamos una clase llamada MyTestCase que hereda de unittest.TestCase. Luego definimos un método llamado test_addition() que realiza una prueba unitaria simple de suma. La prueba compara el resultado de 1 + 2 con el valor esperado de 3 utilizando el método assertEqual() de unittest.TestCase.
+
+Para ejecutar nuestras pruebas unitarias, podemos usar el método unittest.main(). Por ejemplo, podemos agregar el siguiente código al final de nuestro archivo de prueba para ejecutar todas las pruebas unitarias definidas en nuestra clase de prueba:
+
+```py
+if __name__ == '__main__':
+    unittest.main()
+```
+
+La biblioteca unittest proporciona una amplia variedad de métodos de aserción que se utilizan para verificar el comportamiento esperado de nuestro código en las pruebas unitarias. Algunos de los métodos de aserción más comunes incluyen:
+
+assertEqual(a, b): verifica si a y b son iguales
+assertNotEqual(a, b): verifica si a y b no son iguales
+assertTrue(x): verifica si x es verdadero
+assertFalse(x): verifica si x es falso
+assertIn(a, b): verifica si a está en b
+assertNotIn(a, b): verifica si a no está en b
+assertRaises(exception, callable, *args, **kwds): verifica si callable(*args, **kwds) genera una excepción del tipo exception
+A continuación, se muestra un ejemplo de cómo usar algunos de estos métodos de aserción en una prueba unitaria:
+
+```py
+class MyTestCase(unittest.TestCase):
+    def test_math(self):
+        # Verificar la suma
+        self.assertEqual(1 + 2, 3)
+
+        # Verificar la resta
+        self.assertEqual(5 - 2, 3)
+
+        # Verificar la multiplicación
+        self.assertEqual(2 * 3, 6)
+
+        # Verificar la división
+        self.assertEqual(6 / 2, 3)
+
+        # Verificar si una cadena está en otra
+        self.assertIn('hello', 'hello world')
+
+        # Verificar si se produce una excepción
+        self.assertRaises(ZeroDivisionError, lambda: 1 / 0)
+```
+
+En este ejemplo, definimos un método de prueba test_math() que realiza varias pruebas unitarias utilizando diferentes métodos de aserción. La prueba verifica la suma, la resta, la multiplicación y la división de números, y también verifica si una cadena está contenida en otra. La última prueba utiliza el método assertRaises() para verificar si se produce una excepción de división por cero al ejecutar una operación de división por cero.
+
+Además de los métodos de aserción, la biblioteca unittest también proporciona una serie de métodos para configurar y limpiar las pruebas, así como para agrupar y ejecutar pruebas de manera más efectiva. Algunos de estos métodos incluyen:
+
+setUp(): se ejecuta antes de cada prueba y se utiliza para configurar el entorno de prueba.
+tearDown(): se ejecuta después de cada prueba y se utiliza para limpiar el entorno de prueba.
+setUpClass(): se ejecuta una vez al inicio de la ejecución de todas las pruebas y se utiliza para configurar el entorno de prueba a nivel de clase.
+tearDownClass(): se ejecuta una vez al final de la ejecución de todas las pruebas y se utiliza para limpiar el entorno de prueba a nivel de clase.
+skip(reason): se utiliza para omitir una prueba y se puede proporcionar una razón opcional para la omisión.
+A continuación, se muestra un ejemplo de cómo usar algunos de estos métodos en una clase de prueba:
+
+```py
+class MyTestCase(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        # Configurar el entorno de prueba a nivel de clase
+        pass
+
+    def setUp(self):
+        # Configurar el entorno de prueba
+        pass
+
+    def test_addition(self):
+        # Verificar la suma
+        self.assertEqual(1 + 2, 3)
+
+    @unittest.skip("Esta prueba está desactivada temporalmente")
+    def test_subtraction(self):
+        # Verificar la resta
+        self.assertEqual(5 - 2, 3)
+
+    def tearDown(self):
+        # Limpiar el entorno de prueba
+        pass
+
+    @classmethod
+    def tearDownClass(cls):
+        # Limpiar el entorno de prueba a nivel de clase
+        pass
+```
+
+En este ejemplo, definimos una clase de prueba MyTestCase que utiliza los métodos setUp(), tearDown(), setUpClass() y tearDownClass() para configurar y limpiar el entorno de prueba. También utilizamos el método skip() para omitir temporalmente una prueba de resta.
+
+En resumen, unittest es una biblioteca de Python que se utiliza para escribir y ejecutar pruebas unitarias. Permite definir pruebas unitarias utilizando diferentes métodos de aserción y proporciona métodos para configurar y limpiar el entorno de prueba. unittest es una herramienta esencial para garantizar la calidad del código y reducir los errores en proyectos de Python.
+
+se puede decir que unittest es solo una de las muchas bibliotecas de pruebas disponibles en Python. Otras bibliotecas populares incluyen pytest, doctest y nose. Cada biblioteca tiene sus propias características y ventajas, por lo que es importante investigar y encontrar la que mejor se adapte a las necesidades de cada proyecto.
+
+La biblioteca pytest, por ejemplo, es conocida por su sintaxis más simple y sus capacidades de informes más detallados. También tiene una gran cantidad de complementos y extensiones disponibles que pueden mejorar aún más su funcionalidad. Por otro lado, la biblioteca doctest se utiliza para escribir pruebas dentro de la documentación del código, lo que lo hace ideal para proyectos con una documentación extensa.
+
+Además, la página web proporciona información sobre cómo escribir pruebas eficaces, incluyendo el uso de casos de prueba de borde y pruebas de cobertura de código. También se proporciona información sobre cómo automatizar las pruebas mediante herramientas como Jenkins y Travis CI.
+
+En resumen, la página web proporciona información valiosa sobre cómo escribir pruebas unitarias en Python utilizando la biblioteca unittest, así como información sobre otras bibliotecas de pruebas populares y cómo escribir pruebas eficaces en general. La página también cubre la automatización de pruebas, lo que es importante para proyectos más grandes y complejos.
+
+</details>
+
+</details>
+
 
 <details>
 <summary><h2>detalles</h2></summary>
@@ -497,7 +863,12 @@ print(completo)
 output: sapitorico
 ```
 
-
 </details>
+
+# Recrusos
+
+<iframe src="https://overapi.com/python" width="100%" height="400px"></iframe>
+
+
 
 <p>Este repsoitorio esta dedicadoa mi estudio y desarrollo con el lengruaje python</p>
