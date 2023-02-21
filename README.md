@@ -75,7 +75,7 @@ Si está utilizando clases para estructurar sus datos
 
 Puede utilizar parámetros posicionales con algunas clases incorporadas que proporcionan un orden para sus atributos . Sólo los nombres independientes son asignados por una sentencia match.
 
-
+<img src="https://user-images.githubusercontent.com/105575956/220440537-4dc93b0e-e712-40e5-a946-f08beaeb2e28.png" width="400"/>
 
 </details>
 
